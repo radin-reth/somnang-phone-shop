@@ -1,28 +1,108 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. security from scratch
+2. upload s3, with paperclip
+3. kaminari
+4. semaphoreci
+5. travisCi
+6. honeybadger
+7. rubocop
+8. rspec
+9. Benchmarking tool
+10. security tool
+11. code quality tool
+12. intercom live chat
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Generator:
+  cover_photos:
+
++  Phone {
+    name: '...',
+    price: ...,
+    statuses: [1,2] // 1: hot, 2: new
+    tag_line: 'short description under phone name in detail page'
+    description: '...'
+    shipping:
+    availability:
+    promotion: boolean
+    ---
+    x brand_id:
+  }
+
++ accessories_phones {
+  accessory_id
+  product_id
+}
+
++  accessories {
+    name:
+    price:
+    description:
+    images: attachment_ids
+    features: []
+  }
+
++  Brand {
+    name: 
+  }
+
++  Spec {
+    x name:  // product name
+    x brand: // relation to brand
+    model: 
+    storage:
+    memory
+    camera:
+    processor:
+    battery:
+    ----
+    product_id:
+  }
+
++  profile { //about_us
+    title:
+    description:
+    x images
+  }
+
+  subscriptions { // subscribed emails
+    email: 
+  }
+
+  posts {
+    title:
+    description:
+    images
+  }
+
+  albums {
+    name:
+  }
+
+  albums_images {
+    album_id:
+    image_id:
+  }
+
+  images {
+    name:
+  }
+
+  communications {
+    address:
+    tel:
+    mail:
+    business_hours: []
+  }
+
+
+
+  services {
+    name:
+    price:
+    description:
+    images
+  }
+
+

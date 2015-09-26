@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: MyString
+  memory: MyString
+  storage: MyString
+  camera: MyString
+  processor: MyString
+  battery: MyString
+
+two:
+  model: MyString
+  memory: MyString
+  storage: MyString
+  camera: MyString
+  processor: MyString
+  battery: MyString
