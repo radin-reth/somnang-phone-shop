@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
-  root 'phones#index'
+  get 'home/index'
 
-  resources :phones
+  root 'home#index'
+
+  resources :phones do
+    collection do
+      get 'special-promotion'
+    end
+  end
+
+  resources :accessories
+  resource  :profile
+  resource  :contact_us
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

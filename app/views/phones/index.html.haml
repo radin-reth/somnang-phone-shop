@@ -1,16 +1,23 @@
 .main-block
-  .ecommerce
-    = render "shared/slider"
+  .page-heading-two
     .container
-      = render "shared/show_cases"
-      .main-block
-        %hr
-          .container
-            .ecommerce
-              .row
-                .col-md-9.col-sm-8.col-md-push-3.col-sm-push-4
-                  = render "phones/index/shopping_content"
-                .col-md-3.col-sm-4.col-md-pull-9.col-sm-pull-8
-                  = render "phones/index/sidebar"
-      = render "phones/index/recent_items"
-      
+      %h1 New Products
+      .clearfix
+
+  .container
+    .row
+      - 12.times do
+        .col-md-3.col-sm-6
+          .ecom-ui.ecom-ui-six
+            %span.ecom-hot.bg-red New
+            .img-container
+              = link_to root_path do
+                = image_tag "ecommerce/6.png", class: "img-responsive"
+            .product-details
+              %h4
+                = link_to "Baby Doll - Toys", root_path
+                %span.pull-right.color $14.99
+              .clearfix
+              %p The standard chunk of morel sate gypsum used since 1984.
+            .ecom
+              %a.bg-color{:href => "#"} Phone Detail

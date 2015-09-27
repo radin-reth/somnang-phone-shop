@@ -1,0 +1,13 @@
+= render "shared/slider"
+.container
+  = render "shared/show_cases"
+  .main-block
+    %hr
+      .ecommerce
+        .row
+          .col-md-9.col-sm-8.col-md-push-3.col-sm-push-4
+            = render "phones/index/shopping_content"
+          .col-md-3.col-sm-4.col-md-pull-9.col-sm-pull-8
+            = render "phones/index/sidebar"
+  = render "phones/index/recent_items"
+      
