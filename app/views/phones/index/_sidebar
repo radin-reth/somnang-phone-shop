@@ -1,0 +1,50 @@
+.sidebar
+  %h2
+    %i Brands
+  %ul.list-unstyled.my-list
+    %li
+      %h4
+        %a.active{:href => "#"}
+          %i{class: "fa fa-apple", style: "color: gray;"}
+          &nbsp;&nbsp;&nbsp; Apple
+    %li
+      %h4
+        %a{:href => "#"}
+          %i{class: "fa fa-android", style: "color: green;"}
+          &nbsp;&nbsp;&nbsp; Samsung
+    %li
+      %h4
+        %a{:href => "#"}
+          %i{class: "fa fa-android", style: "color: green;"}
+          &nbsp;&nbsp; Hawai
+    %li
+      %h4
+        %a{:href => "#"}
+          %i{class: "fa fa-btc", style: "color: black;"}
+          &nbsp;&nbsp;&nbsp;  Black Berry
+    %li
+      %h4
+        %a{:href => "#"}
+          %i{class: "fa fa-windows", style: "color: #2e9afe;"}
+          &nbsp;&nbsp;&nbsp; Nokie
+    %li
+      %h4
+        %a{:href => "#"}
+          %i{class: "fa fa-android", style: "color: green;"}
+          &nbsp;&nbsp;&nbsp; Sony
+    %li
+      %h4
+        %a{:href => "#"}
+          %i{class: "fa fa-android", style: "color: green;"}
+          &nbsp;&nbsp;&nbsp; Singtect
+    %li
+      %h4
+        %a{:href => "#"}
+          %i{class: "fa fa-vimeo-square", style: "color: #facc2e;"}
+          &nbsp;&nbsp;&nbsp; Vertu
+    %li
+      %h4
+        %a{:href => "#"} All
+  %h2 Find us on Facebook
+  %ul.list-unstyled.my-list
+    %li Facebook

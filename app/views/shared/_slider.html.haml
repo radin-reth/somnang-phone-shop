@@ -1,0 +1,33 @@
+#bs-carousel-1.carousel.carousel-two.slide{"data-interval" => "2000", "data-pause" => "hover", "data-ride" => "carousel", "data-wrap" => "true"}
+  / Bootstrap indicators. If you don't need indicators, remove the below section
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#bs-carousel-1"}
+    %li{"data-slide-to" => "1", "data-target" => "#bs-carousel-1"}
+    %li{"data-slide-to" => "2", "data-target" => "#bs-carousel-1"}
+  / Slides. You can also add captions
+  .carousel-inner
+    / Item, First item should have extra class "active"
+    .item.active
+      / Image
+      = image_tag "slider/1.png" do
+        / Content
+        .carousel-two-content
+          %h3
+            %a{:href => "#"} SAMSUNG GALAXY S6
+    .item
+      = image_tag "slider/1.png" do
+        / Content
+        .carousel-two-content
+          %h3
+            %a{:href => "#"} SAMSUNG GALAXY NOTE4
+    .item
+      = image_tag "slider/1.png" do
+        / Content
+        .carousel-two-content
+          %h3
+            %a{:href => "#"} SPECAIL PROMOTION
+  / Carousel controls (arrows). If you don't need controls, remove the below section
+  %a.left.carousel-control{"data-slide" => "prev", :href => "#bs-carousel-1", :role => "button"}
+    %span.fa.fa-chevron-left
+  %a.right.carousel-control{"data-slide" => "next", :href => "#bs-carousel-1", :role => "button"}
+    %span.fa.fa-chevron-right
