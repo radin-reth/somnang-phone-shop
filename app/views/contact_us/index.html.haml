@@ -1,68 +1,21 @@
-.page-heading-two
-  .container
-    %h1 Contact Us
-    .clearfix
+= render "shared/page_heading", page_name: "Contact Us"
 
 .container
   .contact-us-two
     .row
       .col-md-5
-        .contact-form
-          %h5 Contact Form
-          %form.form{:role => "form"}
-            .form-group
-              %input#name.form-control{:placeholder => "Enter Name", :type => "text"}
-            .form-group
-              %input#email.form-control{:placeholder => "Enter Email", :type => "text"}
-            .form-group
-              %textarea#comments.form-control{:placeholder => "Enter Message", :rows => "7"}
-            
-            %button.btn.btn-red{:type => "button"} Submit
-            %button.btn.btn-default{:type => "button"} Reset
+        = render "form"
         %hr/
       .col-md-7
-        .contact-map
-          %h5 Locate Us
-          %iframe{:frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2skh!4v1430438036305!6m8!1m7!1sImdmBUvVy6PpfIlc0-1KWQ!2m2!1d11.569217!2d104.927376!3f90!4f0!5f0.7820865974627469", :style => "border:0", :width => "600"}
+        = render "map"
         %hr
 
     .row.text-center
       .col-md-3.col-sm-6
-        / Contact Item
-        .contact-item.bg-red
-          / Icon
-          %i.fa.fa-phone
-          / Heading
-          %h4 Call Us
-          / Paragraph
-          %p
-            Tel : 010 200022
-            %br/
-            Mobile : 010 84 32 12
+        = render "contact_us/contact-items/call_us"
       .col-md-3.col-sm-6
-        / Contact Item
-        .contact-item.bg-lblue
-          %i.fa.fa-building-o
-          %h4 Address
-          %p
-            \#598, Chak Angre Krom,
-            %br/
-            Mean Chey , Street 2, Phnom Penh.
+        = render "contact_us/contact-items/address"
       .col-md-3.col-sm-6
-        / Contact Item
-        .contact-item.bg-green
-          %i.fa.fa-envelope
-          %h4 Mail Us
-          %p
-            %a{:href => "#"} limsomnang678@gmail.com
-            %br/
-            %a{:href => "#"} phoneshop@gmail.com
+        = render "contact_us/contact-items/mail_us"
       .col-md-3.col-sm-6
-        / Contact Item
-        .contact-item.bg-purple
-          %i.fa.fa-calendar-o
-          %h4 Business Hours
-          %p
-            Time : 7:30 AM to 5:30 PM
-            %br/
-            Open: Everyday
+        = render "contact_us/contact-items/business_hours"
