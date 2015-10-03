@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150926075946) do
+ActiveRecord::Schema.define(version: 20151003091138) do
 
   create_table "accessories", force: true do |t|
     t.string   "name"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150926075946) do
     t.datetime "updated_at"
   end
 
-  add_index "accessories_phones", ["accessory_id"], name: "index_accessories_phones_on_accessory_id"
+  add_index "accessories_phones", ["accessory_id", "phone_id"], name: "index_accessories_phones_on_accessory_id_and_phone_id"
   add_index "accessories_phones", ["phone_id"], name: "index_accessories_phones_on_phone_id"
 
   create_table "albums", force: true do |t|
@@ -122,6 +122,14 @@ ActiveRecord::Schema.define(version: 20150926075946) do
 
   create_table "subscriptions", force: true do |t|
     t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
