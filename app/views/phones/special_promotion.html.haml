@@ -1,15 +1,15 @@
 .main-block
-  = render "shared/page_heading", page_name: "New Products"
+  = render "shared/page_heading", page_name: "Specail Promotion"
 
   .container
     .row
-      - 12.times do
+      - 9.times do
         .col-md-3.col-sm-6
           .ecom-ui.ecom-ui-six
             %span.ecom-hot.bg-red New
             .img-container
               = link_to root_path do
-                = image_tag "ecommerce/#{[1,2,3,4,5,6,7,8,9].sample}.png", class: "img-responsive"
+                = image_tag "ecommerce/#{ [1,2,3,4,5].sample }.png", class: "img-responsive"
             .product-details
               %h4
                 = link_to "Baby Doll - Toys", root_path
