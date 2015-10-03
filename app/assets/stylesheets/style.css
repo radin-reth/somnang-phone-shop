@@ -72,7 +72,7 @@ ul .list-unstyled ,ul .my-list,li h4 a:hover {
   margin-left:10px;
   border-bottom:2px solid #32c8de;
   border-top:2px solid #32c8de;
-  box-shadow:  0 0 5px 4px rgba(0,0,0,0.08);
+  /*box-shadow:  0 0 5px 4px rgba(0,0,0,0.08);*/
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -80,9 +80,14 @@ ul .list-unstyled ,ul .my-list,li h4 a.active {
   margin-left:10px;
   border-bottom:2px solid #32c8de;
   border-top:2px solid #32c8de;
-  box-shadow:  0 0 5px 4px rgba(0,0,0,0.08);
+  /*box-shadow:  0 0 5px 4px rgba(0,0,0,0.08);*/
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+ul .list-unstyled ,ul .my-list,li h4 { margin-bottom: 11px; }
+ul .list-unstyled ,ul .my-list,li h4 a {
+  padding: 5px 15px;
+  margin-left: 10px;
 }
 a:hover,
 a:active,
@@ -2519,7 +2524,7 @@ body.boxed.img-5 {
 .header-2 .navy ul li,
 .header-2 .navy ul li a,
 .header-2 .navy #menu-button {
-  padding: 25px 0px 0px 0px;
+  padding: 29px 0px 0px 0px;
   /* padding: 0; */
   border: 0;
   list-style: none;
@@ -2538,7 +2543,7 @@ body.boxed.img-5 {
   float: left;
 }
 .header-2 .navy > ul > li > a {
-  padding: 20px 15px;
+  padding: 11px 15px;
   font-size: 13px;
   line-height:28px;
   color: #666;
