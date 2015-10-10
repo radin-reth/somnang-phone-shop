@@ -46,3 +46,5 @@ gem "paperclip", "~> 4.3"
 gem "haml-rails", "~> 0.9"
 # pry-rails
 gem 'pry-rails',                    '~> 0.3.3'
+
+gem "bcrypt", :require => "bcrypt"

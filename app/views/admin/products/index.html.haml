@@ -1,0 +1,17 @@
+= render 'shared/admin/page_header', page_name: 'Products List'
+
+= link_to "+ Add New Phone", new_admin_product_path, class: "btn btn-success btn-medium", type: "button"
+
+#admin-phones-list
+  .row
+    - 12.times do |index|
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3
+        .panel.panel-default
+          .panel-heading
+            %h3.panel-title= "Product #{index}"
+          .panel-body
+            = "Panel content for Phone##{index}"
+          .panel-footer
+            = link_to "Edit", edit_admin_product_path(index)
+            &nbsp; | &nbsp;
+            = link_to "Delete", admin_product_path(index)
