@@ -5,8 +5,7 @@
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
-    %a.navbar-brand{:href => "index.html"} Somnang Phoneshop
-  / /.navbar-header
+    = link_to 'Somnang Phoneshop', admin_path, class: 'navbar-brand'
   %ul.nav.navbar-top-links.navbar-right
     %li.dropdown
       %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
@@ -41,8 +40,6 @@
           %a.text-center{:href => "#"}
             %strong Read All Messages
             %i.fa.fa-angle-right
-      / /.dropdown-messages
-    / /.dropdown
     %li.dropdown
       %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
         %i.fa.fa-tasks.fa-fw
@@ -92,8 +89,6 @@
           %a.text-center{:href => "#"}
             %strong See All Tasks
             %i.fa.fa-angle-right
-      / /.dropdown-tasks
-    / /.dropdown
     %li.dropdown
       %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
         %i.fa.fa-bell.fa-fw
@@ -138,8 +133,6 @@
           %a.text-center{:href => "#"}
             %strong See All Alerts
             %i.fa.fa-angle-right
-      / /.dropdown-alerts
-    / /.dropdown
     %li.dropdown
       %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
         %i.fa.fa-user.fa-fw
@@ -158,9 +151,6 @@
           %a{:href => "login.html"}
             %i.fa.fa-sign-out.fa-fw
             Logout
-      / /.dropdown-user
-    / /.dropdown
-  / /.navbar-top-links
   .navbar-default.sidebar{:role => "navigation"}
     .sidebar-nav.navbar-collapse
       %ul#side-menu.nav
@@ -170,11 +160,14 @@
               %span.input-group-btn
                 %button.btn.btn-default{:type => "button"}
                   %i.fa.fa-search
-          / /input-group
         %li
-          %a{:href => "index.html"}
+          = link_to admin_path do
             %i.fa.fa-dashboard.fa-fw
             Dashboard
+        %li
+          = link_to admin_products_path do
+            %i.fa.fa-table.fa-fw
+            Phones
         %li
           %a{:href => "#"}
             %i.fa.fa-bar-chart-o.fa-fw
@@ -185,7 +178,6 @@
               %a{:href => "flot.html"} Flot Charts
             %li
               %a{:href => "morris.html"} Morris.js Charts
-          / /.nav-second-level
         %li
           %a{:href => "tables.html"}
             %i.fa.fa-table.fa-fw
@@ -212,7 +204,6 @@
               %a{:href => "icons.html"} Icons
             %li
               %a{:href => "grid.html"} Grid
-          / /.nav-second-level
         %li
           %a{:href => "#"}
             %i.fa.fa-sitemap.fa-fw
@@ -236,8 +227,6 @@
                   %a{:href => "#"} Third Level Item
                 %li
                   %a{:href => "#"} Third Level Item
-              / /.nav-third-level
-          / /.nav-second-level
         %li
           %a{:href => "#"}
             %i.fa.fa-files-o.fa-fw
@@ -248,6 +237,3 @@
               %a{:href => "blank.html"} Blank Page
             %li
               %a{:href => "login.html"} Login Page
-          / /.nav-second-level
-    / /.sidebar-collapse
-  / /.navbar-static-side

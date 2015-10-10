@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   # http://everydayrails.com/2012/07/31/rails-admin-panel-from-scratch.html
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
+
+    resources :products
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
