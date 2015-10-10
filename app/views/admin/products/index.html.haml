@@ -1,5 +1,7 @@
 = render 'shared/admin/page_header', page_name: 'Products List'
 
+= flash_sucess_message
+
 = link_to "+ Add New Phone", new_admin_product_path, class: "btn btn-success btn-medium", type: "button"
 
 #admin-phones-list

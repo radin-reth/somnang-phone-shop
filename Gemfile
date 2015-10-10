@@ -48,3 +48,4 @@ gem "haml-rails", "~> 0.9"
 gem 'pry-rails',                    '~> 0.3.3'
 
 gem "bcrypt", :require => "bcrypt"
+gem 'simple_form'

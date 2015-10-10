@@ -116,6 +116,7 @@ ActiveRecord::Schema.define(version: 20151003091138) do
     t.string   "camera"
     t.string   "processor"
     t.string   "battery"
+    t.integer  "phone_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
