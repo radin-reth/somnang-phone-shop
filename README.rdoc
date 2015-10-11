@@ -33,7 +33,7 @@ Generator:
 
 + accessories_phones {
   accessory_id
-  product_id
+  phone_id
 }
 
 +  accessories {
@@ -49,7 +49,7 @@ Generator:
   }
 
 +  Spec {
-    x name:  // product name
+    x name:  // phone name
     x brand: // relation to brand
     model: 
     storage:
@@ -58,7 +58,7 @@ Generator:
     processor:
     battery:
     ----
-    product_id:
+    phone_id:
   }
 
 +  profile { //about_us

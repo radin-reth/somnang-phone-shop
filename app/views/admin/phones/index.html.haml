@@ -1,0 +1,19 @@
+= render 'shared/admin/page_header', page_name: 'Phone List'
+
+= flash_sucess_message
+
+= link_to "+ Add New Phone", new_admin_phone_path, class: "btn btn-success btn-medium", type: "button"
+
+#admin-phones-list
+  .row
+    - @phones.each do |phone|
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3
+        .panel.panel-default
+          .panel-heading
+            %h3.panel-title= phone.name
+          .panel-body
+            = phone.description
+          .panel-footer
+            = link_to "Edit", edit_admin_phone_path(phone)
+            &nbsp; | &nbsp;
+            = link_to "Delete", admin_phone_path(phone)

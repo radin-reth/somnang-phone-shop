@@ -45,7 +45,12 @@ gem "paperclip", "~> 4.3"
 # Haml Rails
 gem "haml-rails", "~> 0.9"
 # pry-rails
-gem 'pry-rails',                    '~> 0.3.3'
 
 gem "bcrypt", :require => "bcrypt"
 gem 'simple_form'
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'pry-rails',                    '~> 0.3.3'
+end

@@ -1,7 +1,8 @@
-class Admin::ProductsController < ApplicationController
+class Admin::PhonesController < ApplicationController
   layout 'admin'
   
   def index
+    @phones = Phone.all
   end
 
   def new
@@ -11,10 +12,23 @@ class Admin::ProductsController < ApplicationController
     @phone.accessories.build
   end
 
+  def edit
+    @phone = Phone.find(params[:id])
+  end
+
   def create
     @phone = Phone.new(phone_params)
     if @phone.save!
-      redirect_to admin_products_path, notice: "#{@phone.name} has been saved!"
+      redirect_to admin_phones_path, notice: "#{@phone.name} has been saved!"
+    else
+      render @phone
+    end
+  end
+
+  def update
+    @phone = Phone.find(params[:id])
+    if @phone.update_attributes!(phone_params)
+      redirect_to admin_phones_path, notice: "#{@phone.name} has been updated!"
     else
       render @phone
     end
