@@ -16,4 +16,4 @@
           .panel-footer
             = link_to "Edit", edit_admin_phone_path(phone)
             &nbsp; | &nbsp;
-            = link_to "Delete", admin_phone_path(phone)
+            = link_to "Delete", admin_phone_path(phone), method: :delete, data: { confirm: 'Are you Sure?' }

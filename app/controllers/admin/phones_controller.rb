@@ -34,6 +34,13 @@ class Admin::PhonesController < ApplicationController
     end
   end
 
+  def destroy
+    @phone = Phone.find(params[:id])
+    @phone.destroy
+    
+    redirect_to admin_phones_path, notice: "#{@phone.name} has been deleted!"
+  end
+
   private
 
   def phone_params
