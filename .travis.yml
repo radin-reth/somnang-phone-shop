@@ -1,0 +1,6 @@
+language: ruby
+script: "bundle exec rake spec"
+rvm:
+  - 2.1.5
+notifications:
+  email: false
