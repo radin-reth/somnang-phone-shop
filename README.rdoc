@@ -13,6 +13,8 @@
 11. code quality tool
 12. intercom live chat
 13. remove unuse css
+14. ENV[DATABASE_NAME]
+15. decorator
 
 
 Generator:
