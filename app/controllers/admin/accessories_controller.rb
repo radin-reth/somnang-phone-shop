@@ -1,5 +1,6 @@
 class Admin::AccessoriesController < ApplicationController
   layout 'admin'
+  before_action :set_accessory, except: [:index, :new]
 
   def index
     @accessories = Accessory.all
@@ -21,5 +22,18 @@ class Admin::AccessoriesController < ApplicationController
   end
 
   def destroy
+    @accessory.destroy
+
+    redirect_to admin_accessories_path, notice: "#{@accessory.name} has been deleted!"
+  end
+
+  private
+  
+  def set_accessory
+    @accessory = Accessory.find(params[:id])
+  end
+
+  def accessory_params
+    
   end
 end

@@ -65,6 +65,9 @@ ActiveRecord::Schema.define(version: 20151003091138) do
   end
 
   create_table "images", force: true do |t|
+    t.integer  "accessory_id"
+    t.integer  "profile_id"
+    t.integer  "service_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
