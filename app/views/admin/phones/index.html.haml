@@ -10,10 +10,13 @@
       .col-xs-12.col-sm-6.col-md-4.col-lg-3
         .panel.panel-default
           .panel-heading
-            %h3.panel-title= phone.name
+            %h3.panel-title
+              = link_to phone.name, admin_phone_path(phone), class: "a-phone-name"
           .panel-body
             = phone.description
           .panel-footer
-            = link_to "Edit", edit_admin_phone_path(phone)
-            &nbsp; | &nbsp;
-            = link_to "Delete", admin_phone_path(phone), method: :delete, data: { confirm: 'Are you Sure?' }
+            %span.pull-right
+              = link_to "Edit", edit_admin_phone_path(phone)
+              &nbsp; &diam; &nbsp;
+              = link_to "Delete", admin_phone_path(phone), method: :delete, data: { confirm: 'Are you Sure?' }
+            .clearfix

@@ -48,6 +48,7 @@ gem "haml-rails", "~> 0.9"
 
 gem "bcrypt", :require => "bcrypt"
 gem 'simple_form'
+gem 'draper', '~> 1.3'
 
 group :development do
   gem "better_errors"

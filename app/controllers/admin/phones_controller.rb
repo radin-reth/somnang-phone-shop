@@ -34,6 +34,10 @@ class Admin::PhonesController < ApplicationController
     end
   end
 
+  def show
+    @phone = Phone.find(params[:id]).decorate
+  end
+
   def destroy
     @phone = Phone.find(params[:id])
     @phone.destroy
