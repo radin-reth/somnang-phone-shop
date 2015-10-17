@@ -1,2 +1,6 @@
-%h1 Admin::Accessories#show
-%p Find me in app/views/admin/accessories/show.html.haml
+= render 'shared/admin/page_header', page_name: 'Accessory List'
+
+%p= "Name : #{@accessory.name}"
+%p= "Price : #{@accessory.price}"
+%p= "Description : #{@accessory.description}"
+%p= "Features : #{@accessory.features}"
