@@ -1,0 +1,20 @@
+= render 'shared/admin/page_header', page_name: 'Accessories List'
+= flash_sucess_message
+= link_to "+ Add New Accessory", new_admin_accessory_path, class: "btn btn-success btn-medium", type: "button"
+
+#admin-accessories-list
+  .row
+    - @accessories.each do |accessory|
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3
+        .panel.panel-default
+          .panel-heading
+            %h3.panel-title
+              = link_to accessory.name, admin_accessory_path(accessory), class: "a-accessory-name"
+          .panel-body
+            = accessory.description
+          .panel-footer
+            %span.pull-right
+              = link_to "Edit", edit_admin_accessory_path(accessory)
+              &nbsp; &diam; &nbsp;
+              = link_to "Delete", admin_accessory_path(accessory), method: :delete, data: { confirm: 'Are you Sure?' }
+            .clearfix
