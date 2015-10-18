@@ -24,6 +24,11 @@ class Admin::AccessoriesController < ApplicationController
   end
 
   def update
+    if @accessory.update_attributes!(accessory_params)
+      redirect_to admin_accessories_path, notice: "#{@accessory.name} has been updated!"
+    else
+      render @accessory
+    end
   end
 
   def show
