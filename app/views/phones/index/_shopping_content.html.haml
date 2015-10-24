@@ -17,20 +17,4 @@
           .item-hover.bg-color.hidden-xs
             = link_to 'Detail Phone', phone
           %span.hot-tag{ class: "#{['bg-red', 'bg-lblue', 'bg-green'].sample}"} NEW
-  %ul.pagination
-    %li.disabled
-      %a{:href => "#"} «
-    %li.active
-      %a{:href => "#"}
-        1
-        %span.sr-only (current)
-    %li
-      %a{:href => "#"} 2
-    %li
-      %a{:href => "#"} 3
-    %li
-      %a{:href => "#"} 4
-    %li
-      %a{:href => "#"} 5
-    %li
-      %a{:href => "#"} »
+  = paginate @phones

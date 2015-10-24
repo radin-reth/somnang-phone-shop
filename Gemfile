@@ -44,7 +44,7 @@ gem 'spring',        group: :development
 gem "paperclip", "~> 4.3"
 # Haml Rails
 gem "haml-rails", "~> 0.9"
-# pry-rails
+gem 'kaminari'
 
 gem "bcrypt", :require => "bcrypt"
 gem 'simple_form'
