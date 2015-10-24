@@ -10,8 +10,7 @@
 
   %h3 Brand
   
-  = f.simple_fields_for :brand do |bf|
-    = bf.input :name
+  = f.collection_select :brand_id, @brands, :id, :name
 
   %h3 Specification
   = f.simple_fields_for :specification do |sf|

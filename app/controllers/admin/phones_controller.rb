@@ -7,7 +7,7 @@ class Admin::PhonesController < ApplicationController
 
   def new
     @phone = Phone.new
-    @phone.brand = Brand.new
+    @brands = Brand.all
     @phone.specification = Specification.new
     @phone.accessories.build
   end
@@ -48,6 +48,6 @@ class Admin::PhonesController < ApplicationController
   private
 
   def phone_params
-    params.require(:phone).permit(:name, :price, :status, :description, :availability, :promotion, brand_attributes: [:name], specification_attributes: [:model, :memory, :storage, :camera, :processor], accessory_ids: [])
+    params.require(:phone).permit(:name, :price, :status, :description, :availability, :promotion, :brand_id, specification_attributes: [:model, :memory, :storage, :camera, :processor], accessory_ids: [])
   end
 end
