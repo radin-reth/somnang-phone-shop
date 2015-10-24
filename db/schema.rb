@@ -99,6 +99,8 @@ ActiveRecord::Schema.define(version: 20151003091138) do
 
   create_table "profiles", force: true do |t|
     t.string   "title"
+    t.string   "email"
+    t.string   "phone_number"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
