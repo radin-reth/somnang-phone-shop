@@ -13,6 +13,9 @@
 11. code quality tool
 12. intercom live chat
 13. remove unuse css
+14. ENV[DATABASE_NAME]
+15. decorator
+new relic, honeybadger, codeship
 
 
 Generator:
@@ -33,7 +36,7 @@ Generator:
 
 + accessories_phones {
   accessory_id
-  product_id
+  phone_id
 }
 
 +  accessories {
@@ -49,7 +52,7 @@ Generator:
   }
 
 +  Spec {
-    x name:  // product name
+    x name:  // phone name
     x brand: // relation to brand
     model: 
     storage:
@@ -58,7 +61,7 @@ Generator:
     processor:
     battery:
     ----
-    product_id:
+    phone_id:
   }
 
 +  profile { //about_us

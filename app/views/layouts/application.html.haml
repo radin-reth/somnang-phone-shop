@@ -1,28 +1,28 @@
 !!!
 %html
-%head
-%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-%meta{:charset => "utf-8"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:charset => "utf-8"}
 
-%meta{:content => "Your description", :name => "description"}
-%meta{:content => "Your,Keywords", :name => "keywords"}
-%meta{:content => "ResponsiveWebInc", :name => "author"}
-%meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:content => "Your description", :name => "description"}
+    %meta{:content => "Your,Keywords", :name => "keywords"}
+    %meta{:content => "ResponsiveWebInc", :name => "author"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
 
-%link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css", :rel => "stylesheet"}
+    %link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css", :rel => "stylesheet"}
 
-%title SomnangPhoneShop
+    %title SomnangPhoneShop
 
-= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-= csrf_meta_tags
-%body
-  .outer
-    = render "shared/top_bar"
-    = render "shared/header"
-    .main-block
-      .ecommerce
-        = yield
-    = render "shared/footer"
-  = render "shared/totop"
-  
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .outer
+      = render "shared/top_bar"
+      = render "shared/header"
+      .main-block
+        .ecommerce
+          = yield
+      = render "shared/footer"
+    = render "shared/totop"
+    
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true

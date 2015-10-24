@@ -1,0 +1,9 @@
+= render 'shared/admin/page_header', page_name: 'Add New Accessory'
+
+= simple_form_for(@accessory, url: admin_accessories_path, html: { class: 'form-horizontal' }) do |f|
+  = f.input :name
+  = f.input :price
+  = f.input :description
+  = f.input :features
+  = f.button :submit
+  

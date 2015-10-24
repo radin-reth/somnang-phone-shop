@@ -7,6 +7,7 @@ class CreateSpecifications < ActiveRecord::Migration
       t.string :camera
       t.string :processor
       t.string :battery
+      t.references :phone
 
       t.timestamps
     end

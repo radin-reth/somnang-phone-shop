@@ -1,0 +1,10 @@
+.a-phone-name {
+  border-bottom: 1px solid #000;
+  padding-bottom: 1px;
+
+  &:hover {
+    text-decoration: none;
+    color: #337ab7;
+    border-bottom-color: #337ab7;
+  }
+}

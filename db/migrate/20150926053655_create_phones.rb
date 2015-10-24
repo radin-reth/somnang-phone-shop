@@ -1,6 +1,7 @@
 class CreatePhones < ActiveRecord::Migration
   def change
     create_table :phones do |t|
+      t.belongs_to :brand, index:true
       t.string :name
       t.float :price
       t.integer :status

@@ -44,7 +44,18 @@ gem 'spring',        group: :development
 gem "paperclip", "~> 4.3"
 # Haml Rails
 gem "haml-rails", "~> 0.9"
-# pry-rails
-gem 'pry-rails',                    '~> 0.3.3'
+gem 'kaminari'
 
 gem "bcrypt", :require => "bcrypt"
+gem 'simple_form'
+gem 'draper', '~> 1.3'
+gem 'pry-rails',                    '~> 0.3.3'
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end

@@ -1,0 +1,23 @@
+= render 'shared/admin/page_header', page_name: 'Add New Phone'
+
+= simple_form_for(@phone, url: admin_phones_path, html: { class: 'form-horizontal' }) do |f|
+  = f.input :name
+  = f.input :price
+  = f.collection_radio_buttons :status, [[1, 'Hot'] ,[2, 'New']], :first, :last
+  = f.input :description
+  = f.input :availability
+  = f.input :promotion
+
+  %h3 Brand
+  
+  = f.collection_select :brand_id, @brands, :id, :name
+
+  %h3 Specification
+  = f.simple_fields_for :specification do |sf|
+    = sf.input :model
+    = sf.input :memory
+    = sf.input :storage
+    = sf.input :camera
+    = sf.input :processor
+  = f.association :accessories, as: :check_boxes
+  = f.button :submit

@@ -23,7 +23,9 @@ Rails.application.routes.draw do
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
 
-    resources :products
+    resources :phones
+    resources :accessories
+    resources :brands
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

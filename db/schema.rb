@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20151003091138) do
     t.datetime "updated_at"
   end
 
-  add_index "accessories_phones", ["accessory_id", "phone_id"], name: "index_accessories_phones_on_accessory_id_and_phone_id"
+  add_index "accessories_phones", ["accessory_id"], name: "index_accessories_phones_on_accessory_id"
   add_index "accessories_phones", ["phone_id"], name: "index_accessories_phones_on_phone_id"
 
   create_table "albums", force: true do |t|
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20151003091138) do
     t.datetime "updated_at"
   end
 
-  add_index "albums_photos", ["album_id", "photo_id"], name: "index_albums_photos_on_album_id_and_photo_id"
+  add_index "albums_photos", ["album_id"], name: "index_albums_photos_on_album_id"
   add_index "albums_photos", ["photo_id"], name: "index_albums_photos_on_photo_id"
 
   create_table "brands", force: true do |t|
@@ -65,11 +65,15 @@ ActiveRecord::Schema.define(version: 20151003091138) do
   end
 
   create_table "images", force: true do |t|
+    t.integer  "accessory_id"
+    t.integer  "profile_id"
+    t.integer  "service_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "phones", force: true do |t|
+    t.integer  "brand_id"
     t.string   "name"
     t.float    "price"
     t.integer  "status"
@@ -80,6 +84,8 @@ ActiveRecord::Schema.define(version: 20151003091138) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "phones", ["brand_id"], name: "index_phones_on_brand_id"
 
   create_table "photos", force: true do |t|
     t.string   "caption"
@@ -96,6 +102,8 @@ ActiveRecord::Schema.define(version: 20151003091138) do
 
   create_table "profiles", force: true do |t|
     t.string   "title"
+    t.string   "email"
+    t.string   "phone_number"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -116,6 +124,7 @@ ActiveRecord::Schema.define(version: 20151003091138) do
     t.string   "camera"
     t.string   "processor"
     t.string   "battery"
+    t.integer  "phone_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

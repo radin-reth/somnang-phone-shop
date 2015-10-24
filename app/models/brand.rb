@@ -1,3 +1,3 @@
 class Brand < ActiveRecord::Base
-  belongs_to :phone, class_name: 'Phone'
+  has_many :phones, class_name: 'Phone', :dependent => :destroy
 end
