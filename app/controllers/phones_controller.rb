@@ -7,5 +7,6 @@ class PhonesController < ApplicationController
   end
 
   def special_promotion
+    @phones = Phone.with_promotion
   end
 end

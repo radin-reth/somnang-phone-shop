@@ -9,4 +9,6 @@ class Phone < ActiveRecord::Base
                                 size: { in: 0..1024.kilobytes }
 
   accepts_nested_attributes_for :brand, :specification, :accessories
+
+  scope :with_promotion, lambda { where(promotion: true) }
 end

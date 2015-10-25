@@ -4,11 +4,13 @@
     .block-heading-two
       %h3
         %span ABOUT SOMNANG PHONE SHOP
-    .row
-      .col-md-5.col-sm-8
-        = render "slider"
-      .col-md-7.col-sm-12
-        = render "profile_description"
+    
+    - @profiles.each do |profile|
+      .row
+        .col-md-5.col-sm-8
+          = render "slider"
+        .col-md-7.col-sm-12
+          = render partial: "profile_description", locals: { profile: profile }
     
     %hr
     

@@ -16,6 +16,7 @@
 14. ENV[DATABASE_NAME]
 15. decorator
 new relic, honeybadger, codeship
+16. https://github.com/activerecord-hackery/ransack
 
 
 Generator:

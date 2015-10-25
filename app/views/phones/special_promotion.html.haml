@@ -3,18 +3,21 @@
 
   .container
     .row
-      - 9.times do
+      - @phones.each do |phone|
         .col-md-3.col-sm-6
           .ecom-ui.ecom-ui-six
             %span.ecom-hot.bg-red New
             .img-container
-              = link_to root_path do
-                = image_tag "ecommerce/#{ [1,2,3,4,5].sample }.png", class: "img-responsive"
+              = link_to phone do
+                - if phone.avatar?
+                  = image_tag phone.avatar.url, class: "img-responsive"
+                - else
+                  = image_tag "ecommerce/#{ [1,2,3,4,5].sample }.png", class: "img-responsive"
             .product-details
               %h4
-                = link_to "Baby Doll - Toys", root_path
-                %span.pull-right.color $14.99
+                = link_to phone.name, phone
+                %span.pull-right.color= phone.price
               .clearfix
-              %p The standard chunk of morel sate gypsum used since 1984.
+              %p= phone.description
             .ecom
-              %a.bg-color{:href => "#"} Phone Detail
+              = link_to "Phone Detail", phone
