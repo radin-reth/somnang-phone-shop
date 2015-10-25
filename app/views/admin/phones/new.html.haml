@@ -1,12 +1,13 @@
 = render 'shared/admin/page_header', page_name: 'Add New Phone'
 
-= simple_form_for(@phone, url: admin_phones_path, html: { class: 'form-horizontal' }) do |f|
+= simple_form_for(@phone, url: admin_phones_path, html: { class: 'form-horizontal', multipart: true }) do |f|
   = f.input :name
   = f.input :price
   = f.collection_radio_buttons :status, [[1, 'Hot'] ,[2, 'New']], :first, :last
   = f.input :description
   = f.input :availability
   = f.input :promotion
+  = f.input :avatar, as: :file
 
   %h3 Brand
   = f.collection_select :brand_id, @brands, :id, :name

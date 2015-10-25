@@ -9,7 +9,10 @@
       .col-md-4.col-sm-6
         .shopping-item
           = link_to phone do
-            = image_tag "ecommerce/#{[1,2,3,4,5,6,7,8,9].sample}.png", class: "img-responsive"
+            - if phone.avatar?
+              = image_tag phone.avatar.url, class: "img-responsive"
+            - else
+              = image_tag "ecommerce/#{[1,2,3,4,5,6,7,8,9].sample}.png", class: "img-responsive"
           %h4
             = link_to phone.name, phone
             %span.color.pull-right= phone.price
