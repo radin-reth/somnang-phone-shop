@@ -1,0 +1,20 @@
+.shopping-content
+  .block-heading-two
+    %h3
+      %span
+        %i.fa.fa-laptop.color>
+        = "&nbsp; #{@brand.name}".html_safe
+  .row
+    - @phones.each do |phone|
+      .col-md-4.col-sm-6
+        .shopping-item
+          = link_to phone do
+            = image_tag "ecommerce/#{[1,2,3,4,5,6,7,8,9].sample}.png", class: "img-responsive"
+          %h4
+            = link_to phone.name, phone
+            %span.color.pull-right= phone.price
+          .clearfix
+          .item-hover.bg-color.hidden-xs
+            = link_to 'Detail Phone', phone
+          %span.hot-tag{ class: "#{['bg-red', 'bg-lblue', 'bg-green'].sample}"} NEW
+  = paginate @phones
