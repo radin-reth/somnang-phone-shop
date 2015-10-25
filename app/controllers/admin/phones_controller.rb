@@ -48,6 +48,6 @@ class Admin::PhonesController < ApplicationController
   private
 
   def phone_params
-    params.require(:phone).permit(:name, :price, :status, :description, :availability, :promotion, :brand_id, specification_attributes: [:model, :memory, :storage, :camera, :processor], accessory_ids: [])
+    params.require(:phone).permit(:name, :price, :status, :description, :availability, :promotion, :avatar, :brand_id, specification_attributes: [:model, :memory, :storage, :camera, :processor], accessory_ids: [])
   end
 end

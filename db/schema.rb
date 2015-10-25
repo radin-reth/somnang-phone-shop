@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003091138) do
+ActiveRecord::Schema.define(version: 20151025020812) do
 
   create_table "accessories", force: true do |t|
     t.string   "name"
@@ -83,6 +83,10 @@ ActiveRecord::Schema.define(version: 20151003091138) do
     t.boolean  "promotion"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "phones", ["brand_id"], name: "index_phones_on_brand_id"
