@@ -1,2 +1,18 @@
-%h1 Accessories#show
-%p Find me in app/views/accessories/show.html.haml
+.main-block
+  = render "shared/page_heading", page_name: @accessory.name
+
+  .container
+    .row
+      .col-md-3.col-sm-6
+        .ecom-ui.ecom-ui-six
+          %span.ecom-hot.bg-red New
+          .img-container
+            = image_tag "ecommerce/headset.png", class: "img-responsive"
+          .product-details
+            %h4
+              = @accessory.name
+              %span.pull-right.color
+                = @accessory.price
+            .clearfix
+            %p 
+              = @accessory.description
