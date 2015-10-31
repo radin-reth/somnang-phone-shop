@@ -17,6 +17,8 @@
 15. decorator
 new relic, honeybadger, codeship
 16. https://github.com/activerecord-hackery/ransack
+17. share button to facebook
+18. how many people enter website
 
 
 Generator:

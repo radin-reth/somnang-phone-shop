@@ -4,6 +4,7 @@ class PhonesController < ApplicationController
   end
 
   def show
+    @phone = Phone.find(params[:id]).decorate
   end
 
   def special_promotion

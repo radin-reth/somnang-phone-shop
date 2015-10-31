@@ -8,4 +8,11 @@ class PhoneDecorator < Draper::Decorator
     else '-' end
   end
 
+  def price
+    h.number_to_currency(object.price)
+  end
+
+  def availability
+    object.availability? ? 'In Stock' : 'Out of Stock'
+  end
 end

@@ -1,0 +1,17 @@
+#bs-carousel-2.carousel.slide{"data-interval" => "3000", "data-pause" => "hover", "data-ride" => "carousel", "data-wrap" => "true"}
+  %ol.carousel-indicators
+    %li{"data-slide-to" => "0", "data-target" => "#bs-carousel-2"}
+    %li{"data-slide-to" => "1", "data-target" => "#bs-carousel-2"}
+    %li{"data-slide-to" => "2", "data-target" => "#bs-carousel-2"}
+    %li.active{"data-slide-to" => "3", "data-target" => "#bs-carousel-2"}
+    %li{"data-slide-to" => "4", "data-target" => "#bs-carousel-2"}
+  .carousel-inner
+    - 5.times do |i|
+      .item{ class: "#{'active' if i == 1}"}
+        = image_tag "ecommerce/#{[1,2,3,4,5].sample}.png"
+    
+  %a.left.carousel-control{"data-slide" => "prev", :href => "#bs-carousel-2", :role => "button"}
+    %span.fa.fa-chevron-left
+  %a.right.carousel-control{"data-slide" => "next", :href => "#bs-carousel-2", :role => "button"}
+    %span.fa.fa-chevron-right
+    

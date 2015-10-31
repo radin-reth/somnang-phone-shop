@@ -1,2 +1,102 @@
-%h1 Phones#show
-%p Find me in app/views/phones/show.html.erb
+.main-block
+  .container
+    .ecommerce
+      .row
+        .col-md-12.col-sm-12
+          .shopping-content
+            .shopping-single
+              .row
+                .col-md-4.col-sm-6
+                  = render 'phones/show/carousel'
+                .col-md-8.col-sm-6
+                  %h4= @phone.name
+                  %p=  @phone.description
+                  .table-responsive
+                    %table.table.table-bordered.sitem-table
+                      %tbody
+                        %tr
+                          %th Name :
+                          %td= @phone.name
+                        %tr
+                          %th Price :
+                          %td= @phone.price
+                        %tr
+                          %th Shipping :
+                          %td Free(not yet implement)
+                        %tr
+                          %th Brand :
+                          %td= @phone.brand.name
+                        %tr
+                          %th Availability :
+                          %td
+                            %i.fa.fa-check.green
+                            = "\&nbsp;#{@phone.availability}".html_safe
+                  %br
+              %br
+                .product-desc
+                  .nav-tabs-one
+                    %ul#myTab.nav.nav-tabs
+                      %li.active
+                        %a{"data-toggle" => "tab", :href => "#tab1"} Description
+                      %li
+                        %a{"data-toggle" => "tab", :href => "#tab2"} Specs
+                    #myTabContent.tab-content
+                      #tab1.tab-pane.fade.in.active
+                        %h5
+                          Black Berry Z10
+                          %span.color :-
+                        %p
+                          Nulla facilisi. Sed justo dui, scelerisque ut consectetur vel, eleifend id erat. Morbi auctor adipiscing tempor. Phasellus condimentum rutrum aliquet. Quisque eu consectetur erat. Proin rutrum, erat eget posuere semper,
+                          = succeed "," do
+                            %em arcu mauris posuere tortor
+                          in commodo enim magna id massa. Suspendisse potenti. Aliquam erat volutpat. Maecenas quis tristique turpis. Nulla facilisi. Duis sed velit at
+                          %a{:href => "#"} magna sollicitudin cursus
+                          ac ultrices magna. Aliquam consequat, purus vitae auctor ullamcorper, sem velit convallis quam, a pharetra justo nunc et mauris. Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        %h5
+                          Features
+                          %span.color :-
+                        %ul.list-2
+                          %li Etiam adipiscing posuere justo, nec iaculis justo dictum non
+                          %li Cras tincidunt mi non arcu hendrerit eleifend
+                          %li Aenean ullamcorper justo tincidunt justo aliquet et lobortis diam faucibus
+                          %li Maecenas hendrerit neque id ante dictum mattis
+                          %li Vivamus non neque lacus, et cursus tortor
+                      #tab2.tab-pane.fade
+                        %h5
+                          Product Specs
+                          %span.color :-
+                        %table.table.table-bordered.table-hover
+                          %tbody
+                            %tr
+                              %td
+                                %strong Name
+                              %td Black Berry Z10
+                            %tr
+                              %td
+                                %strong Brand
+                              %td Black Berry
+                            %tr
+                              %td
+                                %strong Modal
+                              %td Z10
+                            %tr
+                              %td
+                                %strong Memory
+                              %td 2GB RAM
+                            %tr
+                              %td
+                                %strong Storage
+                              %td 16GB, 32GB, 64GB
+                            %tr
+                              %td
+                                %strong Camera
+                              %td Front VGA, Read 8MP
+                            %tr
+                              %td
+                                %strong Processor
+                              %td BB 1.25GHz Processor
+                            %tr
+                              %td
+                                %strong Battery
+                              %td 30 Hours Standby
+      = render 'phones/index/recent_items'
