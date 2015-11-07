@@ -1,4 +1,7 @@
-class AboutUs < ActiveRecord::Base
+# http://www.railscook.com/recipes/multiple-files-upload-with-nested-resource-using-paperclip-in-rails/
 
-  has_many :pictures, :dependent => :destroy
+class AboutUs < ActiveRecord::Base
+  has_many :pictures, class_name: 'Picture', :dependent => :destroy
+
+  accepts_nested_attributes_for :pictures
 end

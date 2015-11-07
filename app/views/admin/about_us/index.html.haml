@@ -1,3 +1,23 @@
 = render 'shared/admin/page_header', page_name: 'About Us List'
 = flash_sucess_message
 = link_to "+ Add New About Us", new_admin_about_u_path, class: "btn btn-success btn-medium", type: "button"
+
+#admin-accessories-list
+  .row
+    - @abouts_us.each do |about_us|
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3
+        .panel.panel-default
+          .panel-heading
+            %h3.panel-title
+              = link_to about_us.name, admin_about_u_path(about_us), class: "an-about-us-name"
+          .panel-body
+            = about_us.description
+            - if about_us.pictures.present?
+              - about_us.pictures.each do |picture|
+                = image_tag picture.avatar.url, class: "img-responsive"
+          .panel-footer
+            %span.pull-right
+              = link_to "Edit", edit_admin_about_u_path(about_us)
+              &nbsp; &diam; &nbsp;
+              = link_to "Delete", admin_about_u_path(about_us), method: :delete, data: { confirm: 'Are you Sure?' }
+            .clearfix

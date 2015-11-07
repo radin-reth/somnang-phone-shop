@@ -2,10 +2,9 @@
 
 = #render 'admin/about_us/quill_editor'
 
-= simple_form_for(@about_us, url: new_admin_about_u_path, html: { class: 'form-horizontal', multipart: true }) do |f|
+= simple_form_for(@about_us, url: admin_about_us_path, html: { class: 'form-horizontal', multipart: true }) do |f|
   = f.input :name
   = f.input :description
   = f.label :pictures
-  = file_field_tag "images[]", type: :file, multiple: true
+  = file_field_tag "avatars[]", type: :file, multiple: true
   = f.button :submit
-  
