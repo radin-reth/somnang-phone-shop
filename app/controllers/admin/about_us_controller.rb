@@ -5,6 +5,7 @@ class Admin::AboutUsController < ApplicationController
   end
 
   def new
+    @about_us = AboutUs.new
   end
 
   def edit
