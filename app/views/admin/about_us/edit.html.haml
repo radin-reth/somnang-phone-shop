@@ -1,2 +1,7 @@
-%h1 Admin::AboutUs#edit
-%p Find me in app/views/admin/about_us/edit.html.haml
+= render 'shared/admin/page_header', page_name: 'Add New About Us'
+
+/ Edit images
+= simple_form_for(@about_us, url: admin_about_u_path(@about_us), method: :patch, html: { class: 'form-horizontal' }) do |f|
+  = f.input :name
+  = f.input :description
+  = f.button :submit
