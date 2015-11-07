@@ -1,7 +1,5 @@
 = render 'shared/admin/page_header', page_name: 'Add New About Us'
 
-= #render 'admin/about_us/quill_editor'
-
 = simple_form_for(@about_us, url: admin_about_us_path, html: { class: 'form-horizontal', multipart: true }) do |f|
   = f.input :name
   = f.input :description
