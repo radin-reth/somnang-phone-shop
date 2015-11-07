@@ -1,0 +1,8 @@
+= render 'shared/admin/page_header', page_name: 'Add New About Us'
+
+= simple_form_for(@about_us, url: admin_about_us_path, html: { class: 'form-horizontal', multipart: true }) do |f|
+  = f.input :name
+  = f.input :description
+  = f.label :pictures
+  = file_field_tag "avatars[]", type: :file, multiple: true
+  = f.button :submit

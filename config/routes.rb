@@ -27,6 +27,8 @@ Rails.application.routes.draw do
     resources :phones
     resources :accessories
     resources :brands
+    resources :profile
+    resources :about_us
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
