@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources  :accessories, only: [:index, :show]
-  resources  :contact_us,  only: [:index]
+  resources  :contact_us,  only: [:index, :create]
   resources  :about_us,    only: [:index]
   resources  :brands,      only: [:show]
 

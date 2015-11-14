@@ -1,12 +1,12 @@
 .contact-form
   %h5 Contact Form
-  %form.form{:role => "form"}
+  = simple_form_for @contact, as: 'contact', url: contact_us_path, method: "post", html: {id: "form", role: "form"} do |f|
     .form-group
-      %input#name.form-control{:placeholder => "Enter Name", :type => "text"}
+      = f.input :name, placeholder: 'Enter Name', label: false
     .form-group
-      %input#email.form-control{:placeholder => "Enter Email", :type => "text"}
+      = f.input :sender, as: :email, placeholder: 'Enter Email', label: false
     .form-group
-      %textarea#comments.form-control{:placeholder => "Enter Message", :rows => "7"}
-    
-    %button.btn.btn-red{:type => "button"} Submit
-    %button.btn.btn-default{:type => "button"} Reset
+      = f.input :body, as: :text, placeholder: 'Enter Message', input_html: {cols:40 , rows:7}, label: false
+
+    = f.button :submit, 'Submit', id: "send-mail", class: "btn btn-red"
+    = f.button :button, 'Reset', :type => 'reset', :class => 'btn btn-default'
