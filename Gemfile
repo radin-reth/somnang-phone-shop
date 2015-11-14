@@ -48,6 +48,7 @@ gem 'kaminari'
 
 gem "bcrypt", :require => "bcrypt"
 gem 'simple_form'
+gem 'mail_form'
 gem 'draper', '~> 1.3'
 gem 'pry-rails',                    '~> 0.3.3'
 
