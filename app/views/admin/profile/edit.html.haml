@@ -1,0 +1,9 @@
+= render 'shared/admin/page_header', page_name: "Edit #{@profile.email}"
+
+= simple_form_for(@profile, url: admin_profile_path(@profile), method: :patch, html: { class: 'form-horizontal' }) do |f|
+  = f.input :phone_number
+  = f.input :email
+  = f.input :description
+  = f.input :recommend
+  
+  = f.button :submit

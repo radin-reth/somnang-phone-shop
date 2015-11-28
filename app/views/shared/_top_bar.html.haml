@@ -5,11 +5,12 @@
       / Email
       %i.fa.fa-envelope.color
       \&nbsp;
-      %a{:href => "mailto:limsomnang678@gmail.com"} limsomnang678@gmail.com
+      %a{:href => "mailto:#{@profile.email}"}= @profile.email# limsomnang678@gmail.com
       \&nbsp;&nbsp;
       / Phone
       %i.fa.fa-phone.color
-      \&nbsp; 010 200022
+      \&nbsp; 
+      = @profile.phone_number #010 200022
     / Contact ends
     / Langauge starts
     .tb-language.dropdown.pull-right

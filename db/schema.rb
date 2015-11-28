@@ -122,10 +122,10 @@ ActiveRecord::Schema.define(version: 20151107031333) do
   end
 
   create_table "profiles", force: true do |t|
-    t.string   "title"
     t.string   "email"
     t.string   "phone_number"
     t.text     "description"
+    t.text     "recommend"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

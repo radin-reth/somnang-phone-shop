@@ -1,0 +1,24 @@
+= render 'shared/admin/page_header', page_name: 'Profile List'
+= flash_sucess_message
+- unless @profiles.present?
+  = link_to "+ Add New Profile info", new_admin_profile_path, class: "btn btn-success btn-medium", type: "button"
+
+#admin-phones-list
+  .row
+    - @profiles.each do |profile|
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3
+        .panel.panel-default
+          .panel-heading
+            %h3.panel-title
+              = link_to profile.email, admin_profile_path(profile), class: "a-profile-name"
+            %small= profile.phone_number
+          .panel-body
+            = profile.description
+            %hr
+            = profile.recommend
+          .panel-footer
+            %span.pull-right
+              = link_to "Edit", edit_admin_profile_path(profile)
+              &nbsp; &diam; &nbsp;
+              = link_to "Delete", admin_profile_path(profile), method: :delete, data: { confirm: "Are you Sure?" }
+            .clearfix

@@ -6,7 +6,7 @@
           %h5.bold
             %i.fa.fa-user>
             &nbsp;&nbsp;About_Us
-          %p ដើម្បីទទួលបាននូវពត៏មានពិសេសៗ នឹងសេវាកម្មថ្មីៗ​​ ជាពិសេសមានបង្ហាញនូវ វីដេអូអំពីផលិតផលដែលទើបមកដល់ថ្មីៗកំពុងពេញនិយមសំរាប់មិត្តៗ យុវវ័យ​ សូមចុចទៅលើ​ logo Socail Network ដែលមាននៅខាងក្រោមដូចតទៅ​ ៖
+          %p= @profile.description
           .brand-bg
             %a.facebook{:href => "#"}
               %i.fa.fa-facebook.circle-3
@@ -23,7 +23,7 @@
           %h5.bold
             %i.fa.fa-comments>
             &nbsp;&nbsp;Recommend
-          %p ដើម្បីទទួលបាននូវទូរសព្ទ័ដៃ​​ ដែលមានគុណភាពល្អ​​និង មានបត្រ័ធានាត្រឹមត្រូវ​ សូមមកជាវ រឺមកមើលនៅហាងលក់ទូរសព្ទ័ដៃ​ សំណាង (Somnang Phone Shop)
+          %p= @profile.recommend
       .col-md-3.col-sm-6
         .foot-item
           %h5.bold
