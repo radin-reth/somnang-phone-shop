@@ -1,8 +1,8 @@
 == README
 
-1. security from scratch
+[x] security from scratch
 2. upload s3, with paperclip
-3. kaminari
+[x] kaminari
 4. semaphoreci
 5. travisCi
 6. honeybadger
@@ -19,6 +19,7 @@ new relic, honeybadger, codeship
 16. https://github.com/activerecord-hackery/ransack
 17. share button to facebook
 18. how many people enter website
+19. about us slide (multiple images)
 
 
 Generator:
