@@ -1,8 +1,8 @@
 == README
 
-1. security from scratch
+[x] security from scratch
 2. upload s3, with paperclip
-3. kaminari
+[x] kaminari
 4. semaphoreci
 5. travisCi
 6. honeybadger
