@@ -17,3 +17,6 @@
 
 # Ignore public assets
 /public
+
+# Dotenv file
+.env

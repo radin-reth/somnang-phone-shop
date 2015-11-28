@@ -52,6 +52,7 @@ gem "bcrypt", :require => "bcrypt"
 gem 'simple_form'
 gem 'draper', '~> 1.3'
 gem 'pry-rails',                    '~> 0.3.3'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 group :development do
   gem "better_errors"
