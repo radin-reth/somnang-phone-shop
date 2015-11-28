@@ -5,12 +5,12 @@
       %h3
         %span ABOUT SOMNANG PHONE SHOP
     
-    - @profiles.each do |profile|
+    - @about_us.each do |about_us|
       .row
         .col-md-5.col-sm-8
           = render "slider"
         .col-md-7.col-sm-12
-          = render partial: "profile_description", locals: { profile: profile }
+          = render partial: "profile_description", locals: { about_us: about_us }
     
     %hr
     
@@ -21,10 +21,10 @@
     .icon-box-4
       .row
         .col-md-3.col-sm-6
-          = render "profile/services/fix_mobile"
+          = render "about_us/services/fix_mobile"
         .col-md-3.col-sm-6
-          = render "profile/services/app_install"
+          = render "about_us/services/app_install"
         .col-md-3.col-sm-6
-          = render "profile/services/sell_case"
+          = render "about_us/services/sell_case"
         .col-md-3.col-sm-6
-          = render "profile/services/buy_second_hand" 
+          = render "about_us/services/buy_second_hand" 

@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   end
 
   resources  :accessories, only: [:index, :show]
-  resources  :contact_us,  only: [:index]
-  resources  :profile,     only: [:index]
+  resources  :contact_us,  only: [:index, :create]
+  resources  :about_us,    only: [:index]
   resources  :brands,      only: [:show]
 
   get "log_out" => "sessions#destroy", :as => "log_out"
