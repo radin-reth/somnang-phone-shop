@@ -50,7 +50,7 @@ gem 'virtus'
 gem "paperclip", "~> 4.3"
 # Haml Rails
 gem "haml-rails", "~> 0.9"
-gem 'kaminari'
+# gem 'kaminari'
 
 gem "bcrypt", :require => "bcrypt"
 gem 'simple_form'
