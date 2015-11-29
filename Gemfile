@@ -1,16 +1,10 @@
 source 'https://rubygems.org'
-ruby '2.1.5'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.12'
-
-group :production do
-  gem 'pg', '~> 0.18.4'
-  gem 'thin'
-end
-# Bootstrap-Sass
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'rails', '4.1.13'
+# Use postgresql as the database for Active Record
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -32,8 +26,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-gem 'virtus'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -46,24 +38,3 @@ gem 'virtus'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# Paperclip
-gem "paperclip", "~> 4.3"
-# Haml Rails
-gem "haml-rails", "~> 0.9"
-# gem 'kaminari'
-
-gem "bcrypt", :require => "bcrypt"
-gem 'simple_form'
-gem 'draper', '~> 1.3'
-gem 'pry-rails',                    '~> 0.3.3'
-gem 'dotenv-rails', :groups => [:development, :test]
-
-group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
-end
-
-group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
-  gem 'sqlite3'
-end
