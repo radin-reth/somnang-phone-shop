@@ -7,6 +7,7 @@ gem 'rails', '4.1.12'
 
 group :production do
   gem 'pg', '~> 0.18.4'
+  gem 'thin'
 end
 # Bootstrap-Sass
 gem 'bootstrap-sass', '~> 3.3.5'
