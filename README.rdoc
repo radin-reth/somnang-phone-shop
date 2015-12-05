@@ -1,5 +1,21 @@
 == README
 
+work on myappPG for deploy
+  https://radiant-shelf-3863.herokuapp.com/
+
+  postgre start server
+  $ postgres -D /usr/local/var/postgres 
+
+  start server normally
+
+  $ rake db:create db:migrate
+
+  Migrating to PostgreSql
+  http://railscasts.com/episodes/342-migrating-to-postgresql?autoplay=true
+
+  rails db
+
+
 [x] security from scratch
 2. upload s3, with paperclip
 [x] kaminari
