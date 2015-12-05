@@ -13,3 +13,11 @@ test:
   pool: 5
   username: radinreth
   password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: somnang_production
+  pool: 5
+  username: radinreth
+  password:
