@@ -11,3 +11,7 @@
 //= require main
 //= require ecommerce
 //= require custom
+
+$(document).ready(function(){
+  $(".dropdown-toggle").dropdown();
+});

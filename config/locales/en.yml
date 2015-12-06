@@ -21,3 +21,11 @@
 
 en:
   hello: "Hello world"
+  locale: 'English'
+  nav:
+    home: "Home"
+    new_phones: "New Phones"
+    accessory: "Accessory"
+    special_promotion: "Special Promotion"
+    about_us: "About Us"
+    contact_us: "Contact Us"

@@ -1,0 +1,10 @@
+km:
+  hello: "សូស្តី"
+  locale: 'ខ្មែរ'
+  nav:
+    home: 'ទំព័រដើម'
+    new_phones: "ទូរស័ព្ទទើបមកដល់"
+    accessory: "Accessory"
+    special_promotion: "Promotion ពិសេស"
+    about_us: "អំពីយើង"
+    contact_us: "ទំនាក់ទំនង"

@@ -13,17 +13,17 @@
           #menu-button Menu
           %ul.pull-right
             %li
-              = link_to "Home", root_path, class: "active"
+              = link_to t(:'nav.home'), root_path, class: "active"
             %li
-              = link_to "New Phones", phones_path
+              = link_to t(:'nav.new_phones'), phones_path
             %li
-              = link_to "Accessory", accessories_path
+              = link_to t(:'nav.accessory'), accessories_path
             %li
-              = link_to "Special Promotion", special_promotion_phones_path
+              = link_to t(:'nav.special_promotion'), special_promotion_phones_path
             %li
-              = link_to "About Us", about_us_path
+              = link_to t(:'nav.about_us'), about_us_path
             %li
-              = link_to "Contact Us", contact_us_path
+              = link_to t(:'nav.contact_us'), contact_us_path
       .col-md-1
         .head-search.pull-right
           %a.b-dropdown{:href => "#"}
